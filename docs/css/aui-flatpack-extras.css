@@ -1,0 +1,238 @@
+/* App Switcher - some of these styles should go into AUI to fix - https://ecosystem.atlassian.net/browse/AUI-1656*/
+.app-switcher-trigger {
+    box-sizing: border-box;
+    float:  left;
+    width: 36px;
+    cursor: pointer;
+}
+
+#flatpack-app-switcher-trigger:after {
+    border: 0;
+}
+
+/* End App Switcher */
+
+.hero-section {
+    background: #f5f5f5;
+    background-position: 0 20px;
+    background-repeat: no-repeat;
+    background-size: 144px 166px;
+    border-radius: 5px;
+    height: 140px;
+    padding: 20px 20px 20px 164px;
+}
+
+.hero-flatpack {
+    background-image: url('../img/flatpack.png');
+}
+
+.hero-cdn {
+    background-image: url('../img/cdn.png');
+}
+
+#load-flatpack-link {
+    cursor: pointer;
+}
+
+#get-flatpack-button {
+    margin: 10px auto;
+}
+
+.aui-intro-page .aui-page-panel-item {
+    padding: 20px 40px 20px 0;
+}
+
+.intro-header h1 {
+    font-size: 48px;
+    line-height: 60px;
+    padding-top: 40px;
+}
+.intro-header p.subtitle {
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 40px;
+}
+
+img.introblob + h2 {
+    margin-top: 30px;
+}
+img.introblob {
+    height: 128px;
+    width: 128px;
+}
+
+/* hide stuff in demos that should only be in sandbox */
+.sandbox-details {
+    display: none;
+}
+
+.flatpack-intro {
+    margin-bottom: 40px;
+}
+
+.flatpack-intro ul,
+ul.links,
+#all-in-nav ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+ul.links li,
+#all-in-nav li {
+    display: inline-block;
+}
+#all-in-nav li:after {
+    content: ", ";
+    padding-right: 10px;
+}
+#all-in-nav li:first-child:after {
+    content: ": ";  
+}
+#all-in-nav li:last-child:after {
+    content: ".";
+}
+
+
+ul.links li:before {
+    color: #ccc;
+    content: "•";
+    padding: 0 10px;
+}
+ul.links li:first-child:before {
+    color: #333;
+    content: none;
+    padding: 0;
+}
+
+.avatars-example .aui-avatar {
+    float: left;
+    margin-right: 10px;
+}
+.avatars-example:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.icons-example .aui-icon,
+.aui-button .aui-icon {
+    color: #707070;
+}
+
+.icons-example .aui-icon {
+    margin-right: 10px;
+}
+
+.example-inverted-icon {
+    background: #707070;
+    margin-right: 10px;
+}
+.example-inverted-icon .aui-icon {
+    margin-right: 0;
+}
+
+
+#aui-vnav-example {
+    width: 200px; /* fudging the example because it's in an odd location. */
+}
+
+#pageheader-example {
+    background: #F5F5F5;
+}
+
+#toolbar2-example > .aui-buttons .aui-button { 
+    margin-top: 0; /* remove spacing so it looks */
+}
+
+#ships-name { width: 15%; }
+#ships-nickname { width: 20%; }
+#ships-type { width: 25%; }
+#ships-misadventure { width: 40%;}
+
+.all-in > h2 {
+    border-bottom: 1px solid #ccc;
+    color: #000;
+    padding-top: 64px;
+    font-size: 2em;
+}
+
+
+
+.layout-example .aui-item p {
+    background: #f5f5f5;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+
+.all-in .nav-example {
+    background: #eee;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 16px;
+}
+.nav-example > .aui-item {
+    vertical-align: middle;           
+}
+.nav-example > .aui-item:first-child {
+    text-align: left;
+}
+.nav-example > .aui-item:last-child {
+    text-align: right;
+}
+
+/* Messages Demo tweaks */
+#custom-context {
+    margin-top: 10px;
+}
+/* End Messages Demo tweaks */
+
+/* Page tweaks */
+table.page-layout-options img {
+    width: 200px;
+}
+/* End Page tweaks */
+
+/* Some crap to make Dropdown1 demo work */
+.styled-parent {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#dropDown-standard .aui-dd-parent {
+    display: inline-block;
+}
+/* end Dropdown1 demo */
+
+#demo-toolbar {
+    background: #f0f0f0;
+    margin-bottom: -10px;
+}
+
+#header-version {
+    margin: 0 0 0 10px;
+    position: relative;
+    top: -4px;
+}
+
+.aui-icon-test16-dark {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MEMxQjdEM0NCOTE5MTFFMTlBMzQ4NUQ2REVFRDIyNDMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MEMxQjdEM0RCOTE5MTFFMTlBMzQ4NUQ2REVFRDIyNDMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFM0JFNjI2QkI4RkMxMUUxOUEzNDg1RDZERUVEMjI0MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFM0JFNjI2Q0I4RkMxMUUxOUEzNDg1RDZERUVEMjI0MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pk40z/QAAAAqUExURU5OToWFhUFBQVxcXGlpabu7u62trfHx8dbW1qCgoOTk5MnJyf///zMzM4jsNdcAAABKSURBVHjarM47DsAgDANQl0A/iX3/6xbUSoWukMHDky0F+h0WAc5o6fQXSjSI65tsFRLTCDic+9jI8tyBisntgSAJWTeZfP0WYABnPwvz7Ebc/AAAAABJRU5ErkJggg==);
+}
+.aui-icon-test16 {
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACpQTFRFPDw80tLS4eHhaWlpHh4eWlpalpaWh4eHLS0tw8PDpaWleHh4tLS08PDw8PmB2wAAAE5JREFUeNqkzsEOgDAIA9AC29TR/f/vSsiMxoOHyaGQlx7AeA1WQTKoE6x4pMP61WAAaxZu8GKQJ2wtV0Kr8KHwnRMOMk6l/Pr0C04BBgBSWgvzXSVXIwAAAABJRU5ErkJggg==);
+}
+
+/*Spinner demo tweak */
+#spinner-spinner {
+    display: block;
+    margin-left: 20px;
+}
+
+/* Inline demo - white bg */
+body.inline-demo {
+    background: #fff;
+}
+
+

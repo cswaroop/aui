@@ -1,0 +1,19 @@
+/* Use this for special component css that needs to be shown in the output */
+body {
+    background: #fff;
+    padding: 10px;
+}
+
+.page-level {
+    background: #f5f5f5;
+    padding: 0;
+}
+
+#reveal-text-content{
+    min-height: 1.5em;
+}
+
+.inverted-progress-tracker-example {
+    background: #f5f5f5;
+    padding: 10px;
+}

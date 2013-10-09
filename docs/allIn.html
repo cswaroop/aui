@@ -1,0 +1,931 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=EDGE"><title>AUI Documentation</title><link rel="icon" type="image/png" href="../docs/img/favicon.png" />
+<link rel="stylesheet" href="../aui/css/aui-all.css" media="all">
+<!--[if lt IE 9]><link rel="stylesheet" href="../aui/css/aui-ie.css" media="all"><![endif]-->
+<!--[if IE 9]><link rel="stylesheet" href="../aui/css/aui-ie9.css" media="all"><![endif]-->
+<script src="../aui/js/aui-all.js"></script>
+<!--[if lt IE 9]><script src="../aui/js/aui-ie.js"></script><![endif]-->
+<link rel="stylesheet" href="../docs/css/aui-flatpack-extras.css" media="all">
+<script src="../docs/js/aui-flatpack-extras.js"></script><link rel="stylesheet" href="../docs/css/aui-flatpack-docs.css" media="all">
+<script src="../docs/js/aui-flatpack-docs.js"></script>
+</head><body id="aui-flatpack"><div id="page"><header id="header" role="banner"><nav class="aui-header aui-dropdown2-trigger-group" role="navigation"><div class="aui-header-inner"><div class="aui-header-before"><a class="aui-dropdown2-trigger app-switcher-trigger" aria-owns="app-switcher" id="flatpack-app-switcher-trigger"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">Design/AUI</span></a><div class="aui-dropdown2 aui-style-default" id="app-switcher"><ul><li><a class="aui-dropdown2-radio interactive checked">AUI</a></li><li><a href="https://developer.atlassian.com/design/latest/" class="aui-dropdown2-radio interactive">Design Guidelines</a></li><li><a href="/sandbox" class="aui-dropdown2-radio interactive">AUI Sandbox</a></li></ul></div></div><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-aui"><a href="../index.html"><span class="aui-header-logo-device">AUI</span></a></h1>			<ul class="aui-nav">
+			    <li><a href="../docs/index.html">Documentation</a></li>
+			    <li><a href="../sandbox/index.html">Sandbox</a></li>
+			</ul></div></div><!-- .aui-header-inner--></nav><!-- .aui-header --></header><!-- #header --><section id="content" role="main"><header class="aui-page-header"><div class="aui-page-header-inner"><div class="aui-page-header-main"><h1>Documentation</h1></div><!-- .aui-page-header-main --></div><!-- .aui-page-header-inner --></header><!-- .aui-page-header --><div class="aui-page-panel"><div class="aui-page-panel-inner"><div class="aui-page-panel-nav"><nav class="aui-navgroup aui-navgroup-vertical"><div class="aui-navgroup-inner"><div class="aui-nav-heading"><strong>General Components</strong></div><ul class="aui-nav"><li class=""><a href="applicationHeader.html" class="docs-nav-link" id="header-link">Application header</a></li><li class=""><a href="avatars.html" class="docs-nav-link" id="avatars-link">Avatars</a></li><li class=""><a href="badges.html" class="docs-nav-link" id="badges-link">Badges</a></li><li class=""><a href="buttons.html" class="docs-nav-link" id="buttons-link">Buttons</a></li><li class=""><a href="datePicker.html" class="docs-nav-link" id="date-picker-link">Date picker</a></li><li class=""><a href="dialog.html" class="docs-nav-link" id="dialog-link">Dialog</a></li><li class=""><a href="dropdown2.html" class="docs-nav-link" id="dropdown2-link">Dropdown 2</a></li><li class=""><a href="forms.html" class="docs-nav-link" id="forms-link">Forms</a></li><li class=""><a href="hiddenAssistiveCSS.html" class="docs-nav-link" id="hidden-assistive-css-link">Hidden and assistive CSS</a></li><li class=""><a href="icons.html" class="docs-nav-link" id="icons-link">Icons</a></li><li class=""><a href="inlineDialog.html" class="docs-nav-link" id="inline-dialog-link">Inline dialog</a></li><li class=""><a href="keyboard.html" class="docs-nav-link" id="keyboard-link">Keyboard shortcuts</a></li><li class=""><a href="layout.html" class="docs-nav-link" id="layout-link">Layout</a></li><li class=""><a href="lozenges.html" class="docs-nav-link" id="lozenges-link">Lozenges</a></li><li class=""><a href="messages.html" class="docs-nav-link" id="messages-link">Messages</a></li><li class=""><a href="navigation.html" class="docs-nav-link" id="navigation-link">Navigation</a></li><li class=""><a href="page.html" class="docs-nav-link" id="page-link">Page</a></li><li class=""><a href="pageContentLayout.html" class="docs-nav-link" id="page-content-layout-link">Page content layout</a></li><li class=""><a href="pageHeader.html" class="docs-nav-link" id="page-header-link">Page header</a></li><li class=""><a href="tables.html" class="docs-nav-link" id="tables-link">Tables</a></li><li class=""><a href="tabs.html" class="docs-nav-link" id="tabs-link">Tabs</a></li><li class=""><a href="template.html" class="docs-nav-link" id="template-link">Template</a></li><li class=""><a href="typography.html" class="docs-nav-link" id="typography-link">Typography</a></li><li class=""><a href="toolbar2.html" class="docs-nav-link" id="toolbar2-link">Toolbar 2</a></li></ul><div class="aui-nav-heading"><strong>Experimental</strong></div><ul class="aui-nav"><li class=""><a href="expander.html" class="docs-nav-link" id="expander-link">Expander</a></li><li class=""><a href="labels.html" class="docs-nav-link" id="labels-link">Labels</a></li><li class=""><a href="mobile.html" class="docs-nav-link" id="mobile-link">Mobile</a></li><li class=""><a href="progressIndicator.html" class="docs-nav-link" id="progress-indicator-link">Progress Indicator</a></li><li class=""><a href="progressTracker.html" class="docs-nav-link" id="progress-tracker-link">Progress tracker</a></li><li class=""><a href="restfulTable.html" class="docs-nav-link" id="restful-table-link">RESTful table</a></li><li class=""><a href="sidebar.html" class="docs-nav-link" id="sidebar-link">Sidebar</a></li><li class=""><a href="sortableTable.html" class="docs-nav-link" id="sortable-table-link">Sortable table</a></li><li class=""><a href="soy.html" class="docs-nav-link" id="soy-link">Soy</a></li><li class=""><a href="spinner.html" class="docs-nav-link" id="spinner-link">Spinner</a></li><li class=""><a href="tooltips.html" class="docs-nav-link" id="tooltips-link">Tooltips</a></li></ul><div class="aui-nav-heading"><strong>Other</strong></div><ul class="aui-nav"><li class=""><a href="helper.html" class="docs-nav-link" id="helper-link">Helper functions</a></li><li class=""><a href="components.html" class="docs-nav-link" id="components-link">Components matrix</a></li><li class=" aui-nav-selected"><a href="allIn.html" class="docs-nav-link" id="all-in-link">All-in</a></li></ul></div></nav></div><section class="aui-page-panel-content"><h1>All-in</h1><h2 id="avatars">Avatars</h2><div class="aui-flatpack-example avatars-example"><span class="aui-avatar aui-avatar-xsmall"><span class="aui-avatar-inner"><img src="img/avatar-16.png" alt="User Avatar"></span></span><span class="aui-avatar aui-avatar-small"><span class="aui-avatar-inner"><img src="img/avatar-24.png" alt="User Avatar"></span></span><span class="aui-avatar aui-avatar-medium"><span class="aui-avatar-inner"><img src="img/avatar-32.png" alt="User Avatar"></span></span><span class="aui-avatar aui-avatar-large"><span class="aui-avatar-inner"><img src="img/avatar-48.png" alt="User Avatar"></span></span><span class="aui-avatar aui-avatar-xxlarge"><span class="aui-avatar-inner"><img src="img/avatar-96.png" alt="User Avatar"></span></span><span class="aui-avatar aui-avatar-project aui-avatar-small"><span class="aui-avatar-inner"><img src="img/project-24.png" alt="Project Avatar"></span></span><span class="aui-avatar aui-avatar-project aui-avatar-medium"><span class="aui-avatar-inner"><img src="img/project-32.png" alt="Project Avatar"></span></span><span class="aui-avatar aui-avatar-project aui-avatar-large"><span class="aui-avatar-inner"><img src="img/project-48.png" alt="Project Avatar"></span></span><span class="aui-avatar aui-avatar-project aui-avatar-xlarge"><span class="aui-avatar-inner"><img src="img/project-64.png" alt="Project Avatar"></span></span><span class="aui-avatar aui-avatar-project aui-avatar-xxxlarge"><span class="aui-avatar-inner"><img src="img/project-128.png" alt="Project Avatar"></span></span></div><!--<div class="aui-flatpack-example avatars-example">
+<span class="aui-avatar aui-avatar-xsmall">
+    <span class="aui-avatar-inner">
+        <img src="static/img/avatar-16.png"></img>
+    </span>
+</span>
+
+<span class="aui-avatar aui-avatar-small">
+    <span class="aui-avatar-inner">
+         <img src="static/img/avatar-24.png"></img>
+    </span>
+</span>
+
+<span class="aui-avatar aui-avatar-medium">
+    <span class="aui-avatar-inner">
+         <img src="static/img/avatar-32.png"></img>
+    </span>
+</span>
+
+<span class="aui-avatar aui-avatar-large">
+    <span class="aui-avatar-inner">
+         <img src="static/img/avatar-48.png"></img>
+    </span>
+</span>
+
+<span class="aui-avatar aui-avatar-xxlarge">
+    <span class="aui-avatar-inner">
+         <img src="static/img/avatar-96.png"></img>
+    </span>
+</span>
+
+<span class="aui-avatar aui-avatar-project aui-avatar-small">
+    <span class="aui-avatar-inner">
+        <img src="static/img/project-24.png"></img>
+    </span>
+</span>
+
+<span class="aui-avatar aui-avatar-project aui-avatar-medium">
+    <span class="aui-avatar-inner">
+        <img src="static/img/project-32.png"></img>
+    </span>
+</span>
+
+<span class="aui-avatar aui-avatar-project aui-avatar-large">
+    <span class="aui-avatar-inner">
+        <img src="static/img/project-48.png"></img>
+    </span>
+</span>
+
+<span class="aui-avatar aui-avatar-project aui-avatar-xlarge">
+    <span class="aui-avatar-inner">
+        <img src="static/img/project-64.png"></img>
+    </span>
+</span>
+
+<span class="aui-avatar aui-avatar-project aui-avatar-xxxlarge">
+    <span class="aui-avatar-inner">
+        <img src="static/img/project-128.png"></img>
+    </span>
+</span>
+</div>--><h2 id="badges">Badges</h2><p>Small pieces of extra information within components like Navigation, eg. a count:</p><div class="aui-flatpack-example badges-example">
+<span class="aui-badge">1</span>
+<span class="aui-badge">2</span>
+<span class="aui-badge">3</span>
+<span class="aui-badge">4</span>
+<span class="aui-badge">5</span>
+<span class="aui-badge">6</span>
+<span class="aui-badge">7</span>
+</div><h2 id="buttons">Buttons</h2><p>AUI Buttons cover combinations of free standing, grouped, disabled and toggled buttons:</p><div class="aui-flatpack-example buttons-example">
+<p>
+<button  class="aui-button">Button</button>
+</p>
+
+<p>
+<button  class="aui-button aui-button-primary">Primary button</button>
+</p>
+
+<p>
+<button  class="aui-button aui-button-link">Link button</button>
+</p>
+
+<p> 
+<button  class="aui-button aui-dropdown2-trigger" aria-owns="dropdown2-more" aria-haspopup="true">Dropdown button</button>
+    <div id="dropdown2-more" class="aui-dropdown2 aui-style-default">
+        <ul class="aui-list-truncate">
+            <li><a href="http://example.com/">Menu item 1</a></li>
+            <li><a href="http://example.com/">Menu item 2</a></li>
+            <li><a href="http://example.com/">Menu item 3</a></li>
+        </ul>
+    </div>
+</p>
+
+<p>
+<button  class="aui-button"><span class="aui-icon aui-icon-small aui-iconfont-view">View </span> Icon button</button>
+</p>
+
+<p>
+<button  class="aui-button" aria-disabled="true">Disabled button</button>
+</p>
+
+<p>
+<button  class="aui-button aui-button-subtle"><span class="aui-icon aui-icon-small aui-iconfont-configure">Configure </span> Subtle button</button>
+</p>
+
+<p>
+    <div id="split-button-demo" class="aui-buttons"><button  class="aui-button aui-button-split-main">Split button</button><button  class="aui-button aui-dropdown2-trigger aui-button-split-more" aria-owns="split-container-dropdown" aria-haspopup="true">Split button more</button></div>
+    <div id="split-container-dropdown" class="aui-dropdown2 aui-style-default" data-container="split-button-demo">
+        <ul class="aui-list-truncate">
+            <li><a href="http://example.com/">Menu item 1</a></li>
+            <li><a href="http://example.com/">Menu item 2</a></li>
+            <li><a href="http://example.com/">Menu item 3</a></li>
+        </ul>
+    </div>
+</p>
+
+<p class="aui-buttons">
+    <button class="aui-button">Button</button>
+    <button class="aui-button">Button</button>
+    <button class="aui-button">Button</button>
+</p>
+</div><p>Sets of grouped buttons can be contained in Toolbar2 for a complete toolbar.</p><h2 id="datepicker">Date Picker</h2><p>A simple date picker polyfill for browsers that don't support date fields.</p><div class="aui-flatpack-example"><input class="aui-date-picker" id="demo-range-always" type="date" max="2012-01-05" min="2011-12-25" /></div><h2 id="dialogs">Dialogs</h2><div class="aui-flatpack-example dialog-example">
+<button id="dialog-button" class="aui-button">Show dialog</button>
+</div>
+<script>
+AJS.$(document).ready(function(){
+// begin demo javascript    
+
+    //create a dialog 800px wide x 500px high
+    var dialog = new AJS.Dialog({width:800, height:500, id:"example-dialog", closeOnOutsideClick: true});
+
+    // PAGE 0 (first page)
+    // adds header for first page
+    dialog.addHeader("Dialog");
+
+    // add panel 1
+    dialog.addPanel("Panel 1", "<p>Some content for panel 1.</p>", "panel-body");
+    // You can remove padding with:
+    // dialog.get("panel:0").setPadding(0);
+
+    // add panel 2 (this will create a menu on the left side for selecting panels within page 0)
+    dialog.addPanel("Panel 2", "<p>Some content for panel 2.</p><div style='height: 2000px;'>(forced-height element to demonstrate scrolling content)</div><p>End.</p>", "panel-body");
+
+    dialog.addButton("Next", function (dialog) {
+        dialog.nextPage();
+    });
+    dialog.addLink("Cancel", function (dialog) {
+        dialog.hide();
+    }, "#");
+
+    // PAGE 1 (second page)
+    // adds a new page to dialog
+    dialog.addPage();
+
+    // adds header for second page
+    dialog.addHeader("Dialog");
+
+    // adds a single panel on second page (as there is only one panel, no menu will appear on the left side)
+    dialog.addPanel("SinglePanel", "<p>Some content for the only panel on Page 1</p>", "singlePanel");
+
+    // add "Previous" button to page 1
+    dialog.addButton("Previous", function(dialog) {
+       dialog.prevPage();
+    });
+    // adds "Cancel" button to page 1
+    dialog.addButton("Cancel", function (dialog) {
+        dialog.hide();
+    });
+
+    // Add events to dialog trigger elements
+    AJS.$("#dialog-button").click(function() {
+        // PREPARE FOR DISPLAY
+        // start first page, first panel
+        dialog.gotoPage(0);
+        dialog.gotoPanel(0);
+        dialog.show();
+    });
+
+    AJS.$("#dialog-link").click(function(){
+        dialog.gotoPage(0);
+        dialog.gotoPanel(0);
+        dialog.show();
+    });
+    
+// end demo javascript    
+});
+</script>
+<h2 id="dropdown2">Dropdown2</h2><div class="aui-flatpack-example dropdown2-example">
+<!-- Simple Dropdown - trigger -->
+<p>
+<a href="#dwarfers" aria-owns="dwarfers" aria-haspopup="true" class="aui-button aui-dropdown2-trigger aui-style-default">Shipmates</a></p>
+<!-- Simple Dropdown - dropdown -->
+<div id="dwarfers" class="aui-dropdown2 aui-style-default">
+    <ul class="aui-list-truncate">
+        <li><a href="http://example.com/">Lister</a></li>
+        <li><a href="http://example.com/">Rimmer</a></li>
+        <li><a href="http://example.com/">Cat</a></li>
+        <li><a href="http://example.com/">Kryten</a></li>
+    </ul>
+</div><!-- .aui-dropdown2 -->
+
+<!-- Dropdown with sections - trigger -->
+<p>
+<a href="#red-dwarf-ships" aria-owns="red-dwarf-ships" aria-haspopup="true" class="aui-button aui-dropdown2-trigger aui-style-default">The Crimson Short One</a></p>
+<!-- Dropdown with sections - dropdown -->
+<div id="red-dwarf-ships" class="aui-dropdown2 aui-style-default">
+    <div class="aui-dropdown2-section">
+        <ul>
+            <li><a href="#foo">Red Dwarf</a></li>
+            <li><a href="#foo">Low Red Dwarf</a></li>
+            <li><a href="#foo">High Red Dwarf</a></li>
+            <li><a href="#foo">Nanobot Red Dwarf</a></li>
+        </ul>
+    </div>
+    <div class="aui-dropdown2-section">
+      <strong>Support Ships</strong>
+        <ul>
+            <li><a href="#foo">Starbug</a></li>
+            <li><a href="#foo">Blue Midget</a></li>
+            <li><a href="#foo">White Giant</a></li>
+        </ul>
+    </div>
+    <div class="aui-dropdown2-section">
+      <strong>Other Ships</strong>
+        <ul>
+            <li><a href="#foo">Wildfire</a></li>
+            <li><a href="#foo">SSS Esperanto</a></li>
+            <li><a href="#foo">Nova 5</a></li>
+        </ul>
+    </div>
+</div><!-- .aui-dropdown2 -->
+
+<!-- Dropdown with everything - Trigger -->
+<p>
+<button aria-owns="dropdown2-all-in" aria-haspopup="true" class="aui-button aui-dropdown2-trigger">Dropdown with everything</button></p>
+<!-- Dropdown with everything - Dropdown -->
+<div id="dropdown2-all-in" class="aui-dropdown2 aui-style-default">
+  <div class="aui-dropdown2-section">
+    <ul>
+      <li><a href="./edit">Edit Issue</a></li>
+      <li><a class="disabled" title="You don't have permission to edit this issue.">Delete</a></li>
+      <li><a href="#comment-form">Comment</a></li>
+    </ul>
+  </div>
+  <div class="aui-dropdown2-section">
+    <strong>Transitions</strong>
+    <ul>
+      <li><a href="./transition?state=1">Start Progress</a></li>
+      <li><a href="./transition?state=4">Close Issue</a></li>
+    </ul>
+  </div>
+  <div class="aui-dropdown2-section">
+    <ul>
+      <li><a class="aui-dropdown2-radio interactive checked">Option 1</a></li>
+      <li><a class="aui-dropdown2-radio interactive">Option 2</a></li>
+      <li><a class="aui-dropdown2-radio interactive">Option 3</a></li>
+    </ul>
+  </div>
+  <div class="aui-dropdown2-section">
+    <ul>
+      <li><a class="aui-dropdown2-checkbox interactive">Check Spelling While Typing</a></li>
+      <li><a class="aui-dropdown2-checkbox interactive checked disabled">Enable Gravity</a></li>
+    </ul>
+  </div>
+  <div class="aui-dropdown2-section">
+    <ul class="aui-list-truncate">
+      <li>
+        <a href="http://example.com/" class="aui-icon-container">
+          <span class="aui-icon aui-icon-small aui-iconfont-view"></span>
+          Icon span pattern
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+<script>
+AJS.$(document).ready(function(){
+// begin demo javascript    
+
+// No javascript required for simple dropdowns.
+// If required you can programmatically invoke
+// Dropdown2 using the aui-button-invoke event:
+// AJS.$("#myDropdown2Trigger").trigger("aui-button-invoke");
+    
+// end demo javascript    
+});
+</script>
+<h2 id="expander">Expander 
+<span class="aui-lozenge aui-lozenge-current">experimental api</span>
+</h2><div id="expander-example"  class="aui-flatpack-example expander-example">
+
+<h3>Content title</h3>
+<div id="reveal-text-content" class="aui-expander-content">
+    What happens when you add a shiny new browser to a stack of already-disagreeing citizens? You’ll inevitably find some bugs. This is the story of how we found a rendering quirk and how the Atlassian frontend team found and refined the fix. The Problem The Atlassian User Interface (AUI) library has just finished an IE10 sprint to get our library prepped and ready for the newest member of the browser family. While IE10 seems generally quite good, we found a couple of problems due to IE10 dropping conditional comments; plus some undesirable behaviours.
+    <a id="reveal-text-trigger" data-replace-text="Show less" data-replace-selector=".reveal-text-trigger-text" class="aui-expander-trigger aui-expander-reveal-text" aria-controls="reveal-text-content">
+        <span class="reveal-text-trigger-text">Show more</span>
+    </a>
+</div>
+
+
+                                    <style>
+                                        #reveal-text-content {
+                                            min-height: 1.5em;
+                                        }
+                                    </style>
+                                    </div>
+<script>
+AJS.$(document).ready(function(){
+// begin demo javascript    
+
+    
+// end demo javascript    
+});
+</script>
+<h2 id="forms">Forms</h2><p>Available in several flavours including compact top-label style, long-label and short-label:</p><!--<div class="aui-flatpack-example forms-example">
+<form action="#" method="post" id="d" class="aui">
+    <fieldset>
+        <div class="field-group">
+            <label for="d-fname">Default field<span class="aui-icon icon-required"> required</span></label>
+            <input class="text" type="text" id="d-fname" name="d-fname" title="first name">
+            <div class="description">Default width input of a required field</div>
+        </div>
+        <div class="field-group">
+            <label for="d-lname">Long field</label>
+            <input class="text long-field" type="text" id="d-lname" name="d-lname" title="last name">
+            <div class="error">Error message here</div>
+            <div class="description">Long width input</div>
+        </div>
+        <div class="field-group">
+            <label for="d-fname">Short field</label>
+            <input class="text short-field" type="text" id="d-fname" name="d-fname" title="first name">
+            <div class="description">Short width input</div>
+        </div>
+        <div class="field-group">
+            <label for="d-fname">Disabled field</label>
+            <input class="text" type="text" id="d-fname" name="d-fname" title="first name" disabled>
+            <div class="description">Disable field input</div>
+        </div>
+        <div class="field-group">
+            <label for="email1">Email</label>
+            <input class="text medium-field" type="text" id="email1" name="email" title="email" placeholder="you@example.com">
+            <span class="aui-icon icon-help">help</span>
+            <div class="description">Medium width input</div>
+        </div>
+        <div class="field-group">
+            <label for="password1" accesskey="p">Password</label>
+            <input class="password" type="password" id="password1" name="password" title="password">
+        </div>
+    </fieldset>
+
+    <h3>Dropdowns and multi select</h3>
+    <fieldset>
+        <legend><span>Dropdowns and multi select</span></legend>
+        <div class="field-group">
+            <label for="dBase">Dropdown</label>
+            <select class="select" id="dBase" name="dBase" title="database select">
+                <option>Select</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <optgroup label="Group 1">
+                    <option>Option one</option>
+                    <option>Option two</option>
+                </optgroup>
+                <option>Option 3</option>
+                <option>Option 4</option>
+            </select>
+        </div>
+        <div class="field-group">
+            <label for="multiselect">Multi select</label>
+            <select class="multi-select" size="4" multiple="multiple" id="multiselect" name="multiselect">
+                <option>option one</option>
+                <option>option two</option>
+                <option>option three</option>
+                <option>option four</option>
+                <option>option five</option>
+                <option>option six</option>
+            </select>
+            <div class="description">Multi select description</div>
+        </div>
+    </fieldset>
+
+    <h3>Textarea</h3>
+    <fieldset>
+        <legend><span>Textarea Legend</span></legend>
+        <div class="field-group">
+            <label for="comment">Comment</label>
+            <textarea class="textarea" name="comment" id="comment" placeholder="Your comment here..."></textarea>
+        </div>
+        <div class="field-group">
+            <label for="licenseKey">License key</label>
+            <textarea class="textarea" rows="6" cols="10" name="licenseKey" id="licenseKey"></textarea>
+        </div>
+    </fieldset>
+    <div class="buttons-container">
+        <div class="buttons">
+            <input class="button submit" type="submit" value="Save" id="d-save-btn1">
+            <a class="cancel" href="#">Cancel</a>
+        </div>
+    </div>
+                            
+    <h3>Radio buttons</h3>
+    <fieldset class="group">
+        <legend><span>Radio buttons</span></legend>
+        <div class="radio">
+            <input class="radio" type="radio" checked="checked" name="rads" id="irOne">
+            <label for="irOne">Save as a blog post</label>
+        </div>
+        <div class="radio">
+            <input class="radio" type="radio" name="rads" id="irTwo">
+            <label for="irTwo">Save as a page</label>
+        </div>
+        <div class="radio">
+            <input class="radio" type="radio" name="rads" id="irTwo">
+            <label for="irTwo">Save to your drafts</label>
+        </div>
+    </fieldset>
+                            
+    <h3>Checkboxes</h3>
+    <fieldset class="group">
+        <legend><span>Checkboxes</span></legend>
+        <div class="checkbox">
+            <input class="checkbox" type="checkbox" name="cbOne" id="cbOne">
+            <label for="cbOne">Receive email</label>
+        </div>                                
+        <div class="checkbox">
+            <input class="checkbox" type="checkbox" name="cbTwo" id="cbTwo">
+            <label for="cbTwo">Receive push notification</label>
+        </div>                                
+        <div class="checkbox">
+            <input class="checkbox" type="checkbox" name="cbThree" id="cbThree">
+            <label for="cbThree">Receive in-app notification</label>
+        </div>                                
+    </fieldset>
+                            
+    <h3>File upload</h3>
+    <fieldset>
+        <legend><span>File upload<span class="aui-icon icon-required"></span></span></legend>
+        <div class="field-group">
+            <label for="uploadFile">Upload file</label>
+            <input class="upfile" type="file" id="uploadFile" name="uploadFile" title="upload file">
+        </div>
+    </fieldset>
+</form>                        
+</div>
+<script>
+AJS.$(document).ready(function(){
+// begin demo javascript    
+
+    
+// end demo javascript    
+});
+</script>
+--><div class="aui-flatpack-example"><form action="#" method="post" id="example" class="aui short-label"><div class="field-group"><label for="example-fname" accesskey="e">First name<span class="aui-icon icon-required"></span><span class="content"> required</span></label><input class="text" type="text" id="example-fname" name="fname" title="first name"><div class="error">Inline error message</div><div class="description">Description text to assist users</div></div><div class="field-group"><label for="h-lname" accesskey="e">Last name<span class="aui-icon icon-required"></span><span class="content"> required</span></label><input class="text long-field" type="text" id="h-lname" name="lname" title="last name"></div><div class="buttons-container"><div class="buttons"><input class="button submit" type="submit" value="Save" id="h-save-btn1"><a class="cancel" href="forms.html#">Cancel</a></div></div></form></div><h2 id="icons">Icons</h2><p>For the full set of icons and sizes, refer to the docs.</p><div class="aui-flatpack-example icons-example">
+<p>Global vector icons:</p>
+<span class="aui-icon aui-icon-small aui-iconfont-view">View</span>
+<span class="aui-icon aui-icon-small aui-iconfont-configure">Configure</span>
+<span class="aui-icon aui-icon-small aui-iconfont-add">Add</span>
+<span class="aui-icon aui-icon-small aui-iconfont-help">Help</span>
+<span class="aui-icon aui-icon-small aui-iconfont-search">Search</span>
+<span class="aui-icon aui-icon-small aui-iconfont-success">Success</span>
+<span class="aui-icon aui-icon-small aui-iconfont-workbox">Workbox</span>
+<span class="aui-icon aui-icon-small aui-iconfont-workbox-empty">Workbox (full)</span>
+<span class="aui-icon aui-icon-small aui-iconfont-email">Email</span>
+<span class="aui-icon aui-icon-small aui-iconfont-appswitcher">App Switcher</span>
+<span class="aui-icon aui-icon-small aui-iconfont-edit">Edit</span>
+<span class="aui-icon aui-icon-small aui-iconfont-share">Share</span>
+<span class="aui-icon aui-icon-small aui-iconfont-user">User</span>
+<span class="aui-icon aui-icon-small aui-iconfont-comment">Comment</span>
+<span class="aui-icon aui-icon-small aui-iconfont-add-comment">Add Comment</span>
+<span class="aui-icon aui-icon-small aui-iconfont-search-small">Search</span>
+<span class="aui-icon aui-icon-small aui-iconfont-remove">Remove</span>
+<span class="aui-icon aui-icon-small aui-iconfont-close-dialog">Close</span>
+<span class="aui-icon aui-icon-small aui-iconfont-remove-label">Remove Label</span>
+<span class="aui-icon aui-icon-small aui-iconfont-time">Time</span>    
+<span class="aui-icon aui-icon-small aui-iconfont-error">Error</span>    
+<span class="aui-icon aui-icon-small aui-iconfont-info">Info</span> 
+<span class="aui-icon aui-icon-small aui-iconfont-approve">Approve</span> 
+<span class="aui-icon aui-icon-small aui-iconfont-build">Build</span>
+<span class="aui-icon aui-icon-small aui-iconfont-jira">JIRA</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-doc">Doc</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-star">Star</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-unstar">Unstar</span>
+<span class="aui-icon aui-icon-small aui-iconfont-watch">Watch</span>
+<span class="aui-icon aui-icon-small aui-iconfont-unwatch">Unwatch</span>
+<span class="aui-icon aui-icon-small aui-iconfont-view-list">List view</span>
+<span class="aui-icon aui-icon-small aui-iconfont-view-card">Card view</span>
+<span class="aui-icon aui-icon-small aui-iconfont-view-table">Table view</span>
+<span class="aui-icon aui-icon-small aui-iconfont-rss">RSS</span>
+<span class="aui-icon aui-icon-small aui-iconfont-expanded">Expanded</span>
+<span class="aui-icon aui-icon-small aui-iconfont-collapsed">Collapsed</span>
+<span class="aui-icon aui-icon-small aui-iconfont-flag">Flag</span>
+<span class="aui-icon aui-icon-small aui-iconfont-confluence">Confluence</span>
+<span class="aui-icon aui-icon-small aui-iconfont-attachment">Attachment</span>
+<span class="aui-icon aui-icon-small aui-iconfont-calendar">Calendar</span>
+<span class="aui-icon aui-icon-small aui-iconfont-details">Details</span>
+<span class="aui-icon aui-icon-small aui-iconfont-arrows-up">Arrows up</span>
+<span class="aui-icon aui-icon-small aui-iconfont-arrows-down">Arrows down</span>
+<span class="aui-icon aui-icon-small aui-iconfont-link">Link</span>
+<span class="aui-icon aui-icon-small aui-iconfont-locked">Locked</span>
+<span class="aui-icon aui-icon-small aui-iconfont-unlocked">Unlocked</span>
+<span class="aui-icon aui-icon-small aui-iconfont-more">More</span>
+<span class="aui-icon aui-icon-small aui-iconfont-quote">Quote</span>
+<span class="aui-icon aui-icon-small aui-iconfont-warning">Warning</span>
+
+<p>Dev tools vector icons:</p>
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-folder-closed">Folder closed</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-folder-open">Folder open</span>
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-file">File</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-file-binary">File binary</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-branch">Branch</span>
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-repository">Repository</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-repository-forked">Repository forked</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-repository-locked">Repository private</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-commit">Commit</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-pull-request">Pull request</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-tag">Tag</span>
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-tag-small">Tag</span>
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-browse-up">Browse up</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-clone">Clone</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-fork">Fork</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-submodule">Submodule</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-arrow-right">Arrow right</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-arrow-left">Arrow left</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-task-in-progress">Task in progress</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-task-cancelled">Task cancelled</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-task-disabled">Task disabled</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-branch-small">Branch (small)</span>   
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-file-commented">Commented file</span>
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-compare">Compare</span>
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-checkout">Checkout</span>
+<span class="aui-icon aui-icon-small aui-iconfont-devtools-side-diff">Side-by-side diff</span>
+
+<p>JIRA icons:</p>
+<span class="aui-icon aui-icon-small aui-iconfont-jira-completed-task">Completed task</span>
+<span class="aui-icon aui-icon-small aui-iconfont-jira-test-session">Test session</span>
+   
+<p>Vector icons also available in large:</p>
+<span class="aui-icon aui-icon-large aui-iconfont-view">View</span>
+<span class="aui-icon aui-icon-large aui-iconfont-configure">Configure</span>
+<span class="aui-icon aui-icon-large aui-iconfont-add">Add</span>
+
+<p>Other icons:</p>
+<span class="aui-icon aui-icon-wait">Wait</span>
+<span class="aui-icon aui-icon-close">Close</span>
+<span class="example-inverted-icon"><span class="aui-icon aui-icon-close-inverted">Close</span></span>
+<span class="aui-icon aui-icon-generic">Generic</span>
+<span class="aui-icon aui-icon-error">Error</span>
+<span class="aui-icon aui-icon-info">Info</span>
+<span class="aui-icon aui-icon-warning">Warning</span>
+<span class="aui-icon aui-icon-success">Success</span>
+
+<p>Dev tools</p>
+<div class="table-icon">
+<p>
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-folder-closed">Folder closed</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-folder-open">Folder open</span>
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-file">File</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-file-binary">File binary</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-branch">Branch</span>
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-repository">Repository</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-repository-forked">Repository forked</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-repository-locked">Repository private</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-commit">Commit</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-pull-request">Pull request</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-tag">Tag</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-browse-up">Browse up</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-clone">Clone</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-fork">Fork</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-submodule">Submodule</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-arrow-right">Arrow right</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-arrow-left">Arrow left</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-task-in-progress">Task in progress</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-task-cancelled">Task cancelled</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-task-disabled">Task disabled</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-branch-small">Branch (small)</span>   
+    <span class="aui-icon aui-icon-small aui-iconfont-devtools-file-commented">Commented file</span>   
+</p>
+</div>
+   
+<p class="sandbox-details">You should adjust the alternative text (the text inside the SPAN element) to suit the meaning and usability of your scenario. If you are using it in a button which has the button's action as visible text, you don't need to duplicate the text inside the icon too. However if you are creating an icon-only control, you should include the alternative text.</p>
+</div><h2 id="inline-dialogs">Inline dialog</h2><p>If you don't need a full modal Dialog, you you can use an Inline Dialog.</p><div class="aui-flatpack-example inlinedialog-example">
+    <p>
+        <a href="http://example.com/" id="popupLink">
+            Show inline dialog
+        </a>
+    </p>
+    <script>
+    AJS.InlineDialog(AJS.$("#popupLink"), 1,
+        function(content, trigger, showPopup) {
+            content.css({"padding":"20px"}).html('<h2>Inline dialog</h2><p>The inline dialog is a wrapper for secondary content/controls to be displayed on user request. Consider this component as displayed in context to the triggering control with the dialog overlaying the page content.</p>');
+            showPopup();
+            return false;
+        }
+    );
+    </script>
+    </div><!--<div class="aui-flatpack-example inlinedialog-example">
+<button class="aui-button aui-button-subtle" href="#" id="popupLink">
+    <span class="aui-icon aui-icon-small aui-iconfont-share">share</span> Show inline dialog
+</button>
+</div>
+<script>
+AJS.$(document).ready(function(){
+// begin demo javascript    
+
+AJS.InlineDialog(AJS.$("#popupLink"), 1,
+    function(content, trigger, showPopup) {
+        content.css({"padding":"20px"}).html('<h2>Inline dialog</h2><p>The inline dialog is a wrapper for secondary content/controls to be displayed on user request. Consider this component as displayed in context to the triggering control with the dialog overlaying the page content.</p><button class="aui-button">Done</button></form>');
+        showPopup();
+        return false;
+    }
+);
+
+// end demo javascript    
+});
+</script>
+--><h2 id="layout">Layout (Group + Item)</h2><p>Borders and backgrounds added for demonstration purposes only - in production, no borders or backgrounds will be applied.</p><div class="aui-flatpack-example layout-example"><div class="aui-group"><div class="aui-item"><p>Evenly spaced item</p></div><div class="aui-item"><p>Evenly spaced item</p></div><div class="aui-item"><p>Evenly spaced item</p></div><div class="aui-item"><p>Evenly spaced item</p></div></div><div class="aui-group aui-group-split"><div class="aui-item"><p>Split group - first item aligned left.</p></div><div class="aui-item"><p>Split group - second item aligned right.</p></div></div><div class="aui-group aui-group-trio"><div class="aui-item"><p>Trio group - first item aligned left.</p></div><div class="aui-item"><p>Trio group - second item aligned centre.</p></div><div class="aui-item"><p>Trio group - third item aligned right.</p></div></div></div><h2 id="keyboard-shortcuts">Keyboard shortcuts</h2><p>WhenIType allows you to trigger various events based on keyboard input.</p><div class="aui-flatpack-example"><p>Type &quot;z&quot; then &quot;e&quot; to execute some simple JavaScript.</p></div><h2 id="labels">Labels</h2><p>AUI provides a CSS-only Label component - each product's implementation is expected to be different, so no default JS is provided.</p><div class="aui-flatpack-example"><p role="application" id="labels-demo"><span id="unclickable-label" class="aui-label">unclickableUncloseable</span><a id="clickable-label" class="aui-label" href="http://example.com/">clickable</a><span id="closeable-label-nourl" class="aui-label aui-label-closeable">closableNoUrl<span tabindex="0" class="aui-icon aui-icon-close" title="(remove closableNoUrl)">(remove closableNoUrl)</span></span><span id="split-label" class="aui-label aui-label-closeable aui-label-split"><a class="aui-label-split-main" href="http://example.com/">splitLabel</a><span class="aui-label-split-close" ><span tabindex="0" class="aui-icon aui-icon-close" title="(remove splitLabel)">(remove splitLabel)</span></span></span></p></div><h2 id="lozenges">Lozenges</h2><p>Standard and Subtle variations:</p><div class="aui-flatpack-example lozenges-example">
+<p>
+    <span class="aui-lozenge">default</span>
+    <span class="aui-lozenge aui-lozenge-success">success</span>
+    <span class="aui-lozenge aui-lozenge-error">error</span>
+    <span class="aui-lozenge aui-lozenge-current">current</span>
+    <span class="aui-lozenge aui-lozenge-complete">new</span>
+    <span class="aui-lozenge aui-lozenge-moved">moved</span>
+</p>
+<p>
+    <span class="aui-lozenge aui-lozenge-subtle">default</span>
+    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-success">success</span>
+    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-error">error</span>
+    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-current">current</span>
+    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-complete">new</span>
+    <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-moved">moved</span>
+</p>
+</div>
+<script>
+AJS.$(document).ready(function(){
+// begin demo javascript    
+
+    
+// end demo javascript    
+});
+</script>
+<h2 id="messages">Messages</h2><div class="aui-flatpack-example messages-example">
+<h3>Inserted with HTML</h3>
+<div class="aui-message">
+    <p class="title">
+        <span class="aui-icon icon-generic"></span>
+        <strong>Backup stale</strong>
+    </p>
+    <p>This instance was last backed up on Thursday, 18 September 2011.</p>
+</div><!-- .aui-message -->
+
+<div class="aui-message warning">
+    <p class="title">
+        <span class="aui-icon icon-warning"></span>
+        <strong>Backing up attachments</strong>
+    </p>
+    <p>Attachments will not be backed up. This needs to be done manually.</p>
+</div><!-- .aui-message -->            
+    
+<div class="aui-message error">
+    <p class="title">
+        <span class="aui-icon icon-error"></span>
+        <strong>Destructive operation!</strong>
+    </p>
+    <p>Data import will wipe all existing content - make sure you backup first!</p>
+</div><!-- .aui-message -->            
+
+<div class="aui-message success">
+    <p class="title">
+
+        <span class="aui-icon icon-success"></span>
+        <strong>Success!</strong>
+    </p>
+    <p>You have backed up your system to C:/backups/filename.xml.</p>
+</div><!-- .aui-message -->            
+
+<div class="aui-message hint">
+    <p class="title">
+        <span class="aui-icon icon-hint "></span>
+
+        <strong>Backup stale</strong>
+    </p>
+    <p>This instance was last backed up on Thursday, 18 September 2011.</p>
+</div>
+<h3>Inserted with JS</h3>
+<div id="aui-message-bar"></div>
+<div id="custom-context"></div>
+</div>
+<script>
+AJS.$(document).ready(function(){
+// begin demo javascript    
+
+AJS.messages.success({
+    title: "Success!",
+    body: "You have backed up your system!"
+});
+
+AJS.messages.generic("#custom-context", {
+   title:"Custom Context Demo",
+   body: '<p>Because you often need to specify where the message goes.</p>'
+});
+    
+// end demo javascript    
+});
+</script>
+<h2 id="progresstracker">Progress Tracker 
+<span class="aui-lozenge aui-lozenge-current">experimental api</span>
+</h2><div class="aui-flatpack-example"><ol class="aui-progress-tracker"><li class="aui-progress-tracker-step" style="width: 20.0%;"><a href="#step1">Step One</a></li><li class="aui-progress-tracker-step aui-progress-tracker-step-current" style="width: 20.0%;"><span>Step Two</span></li><li class="aui-progress-tracker-step" style="width: 20.0%;"><span>Step Three</span></li><li class="aui-progress-tracker-step" style="width: 20.0%;"><span>Step Four</span></li><li class="aui-progress-tracker-step" style="width: 20.0%;"><span>Step Five</span></li></ol></div><h2 id="navigation">Navigation</h2><p>AUI has a core set of navigation elements, which are most commonly used in horizontal and vertical navgroups.</p><h3 id="navigation-horizontal">Horizontal navigation</h3><p>Should be placed immediately before <code>.aui-page-panel</code></p><div id="aui-hnav-example"  class="aui-flatpack-example"><nav class="aui-navgroup aui-navgroup-horizontal"><div class="aui-navgroup-inner"><div class="aui-navgroup-primary"><ul class="aui-nav"><li><a href="http://example.com/">Nav item</a></li><li class="aui-nav-selected"><a href="http://example.com/">Selected nav item</a></li><li><a href="http://example.com/">Nav item <span class="aui-badge">123</span></a></li><li><a href="#dropdown2-nav1" aria-owns="dropdown2-nav1" aria-haspopup="true" class="aui-dropdown2-trigger">Dropdown <span class="aui-icon-dropdown"></span></a><div id="dropdown2-nav1" class="aui-dropdown2 aui-style-default"><ul class="aui-list-truncate"><li><a href="http://example.com/">Dropdown item</a></li><li><a href="http://example.com/">Dropdown item</a></li></ul></div><!-- .aui-dropdown2 --></li><li><a href="http://example.com/">Nav item</a></li><li><a href="http://example.com/">Nav item</a></li></ul></div><!-- .aui-navgroup-primary --><div class="aui-navgroup-secondary"><ul class="aui-nav"><li><a href="#dropdown2-nav2" aria-owns="dropdown2-nav2" aria-haspopup="true" class="aui-dropdown2-trigger" data-container="#aui-hnav-example"><span class="aui-icon aui-icon-small aui-iconfont-configure">Configure</span></a><div id="dropdown2-nav2" class="aui-dropdown2 aui-style-default"><ul class="aui-list-truncate"><li><a href="http://example.com/">Dropdown item</a></li><li><a href="http://example.com/">Dropdown item</a></li></ul></div><!-- .aui-dropdown2 --></li></ul></div><!-- .aui-navgroup-secondary --></div><!-- .aui-navgroup-inner --></nav><!-- .aui-navgroup --></div><h3 id="navigation-vertical">Vertical navigation</h3><p>Usually placed inside an <code>.aui-page-panel-nav</code> but will expand horizontally to fit any appropriate container element.</p><div id="aui-vnav-example"  class="aui-flatpack-example"><nav class="aui-navgroup aui-navgroup-vertical"><div class="aui-navgroup-inner"><ul class="aui-nav"><li class="aui-nav-selected"><a href="http://example.com/">Selected Nav Item</a></li><li><a href="http://example.com/">Nav item</a></li><li><a href="http://example.com/">Nav item</a></li></ul><ul class="aui-nav"><li><a href="http://example.com/">Nav item</a></li><li><a href="http://example.com/">Nav item</a></li></ul><ul class="aui-nav"><li><a href="http://example.com/">Nav item</a></li><li><a href="http://example.com/">Nav item</a></li></ul><div class="aui-nav-heading"><strong>Heading</strong></div><ul class="aui-nav"><li><a href="http://example.com/">Nav item</a></li><li><a href="http://example.com/">Nav item</a></li><li><a href="http://example.com/">Nav item</a></li><li><a href="http://example.com/">Nav item</a></li></ul></div></nav></div><h3 id="navigation-pagination">Pagination navigation</h3><p>Used to show links between paginated content:</p><div id="aui-pagination-example"  class="aui-flatpack-example"><iframe src="demos/paginationDemo01.html" width="100%" height="130" frameborder="0"></iframe><!--<ol class="aui-nav aui-nav-pagination"><li class="aui-nav-first"><a aria-disabled="true" href="http://example.com/">First</a></li><li class="aui-nav-previous"><a aria-disabled="true" href="http://example.com/">Prev</a></li><li class="aui-nav-selected">1</li><li><a href="http://example.com/">2</a></li><li><a href="http://example.com/">3</a></li><li class="aui-nav-truncation">&hellip;</li><li><a href="http://example.com/">998</a></li><li><a href="http://example.com/">999</a></li><li class="aui-nav-next"><a href="http://example.com/">Next</a></li><li class="aui-nav-last"><a href="http://example.com/">Last</a></li></ol>--></div><!-- note can't be ID of page as that's used in page itself :) --><h2 id="pagecomponent">Page</h2><h3>Page Layouts</h3><p>The AUI Page component sets up the whole-page layout, with several options:</p><table class="aui page-layout-options" id="page-options"><thead><tr><th id="page-default">Fluid (default)</th><th id="page-fixed">Fixed</th><th id="page-hybrid">Hybrid</th><th id="page-focused">Focused Task</th></tr></thead><tbody><tr><td><img src="img/example-layout-fluid.png" alt="Diagram showing page with fluid width header, content and footer." /></td><td><img src="img/example-layout-fixed.png" alt="Diagram showing page with fixed width header, content and footer." /></td><td><img src="img/example-layout-hybrid.png" alt="Diagram showing page with fluid width header and footer, but fixed width content." /></td><td><img src="img/example-layout-focusedtask.png" alt="Diagram showing page with narrow content area." /></td></tr></tbody></table><h3>Content layouts</h3><p>Within page layouts, there is a dedicated pattern for setting up the content's layout.</p><table class="aui page-layout-options" id="content-layout-options"><thead><tr><th>Content Only</th><th>Nav + Content</th><th>Content + Sidebar</th><th>Nav + Content + Sidebar</th></tr></thead><tbody><tr><td><img src="img/example-layout-contentonly.png" alt="Diagram showing content area with no extra columns." /></td><td><img src="img/example-layout-navcontent.png" alt="Diagram showing content area with navigation and content." /></td><td><img src="img/example-layout-contentsidebar.png" alt="Diagram showing content area with content and a sidebar." /></td><td><img src="img/example-layout-navcontentsidebar.png" alt="Diagram showing content area with navigation, content and sidebar." /></td></tr></tbody></table><h2 id="pageheader">Page header</h2><div id="pageheader-example"  class="aui-flatpack-example"><header class="aui-page-header"><div class="aui-page-header-inner"><div class="aui-page-header-image"><span class="aui-avatar aui-avatar-xlarge aui-avatar-project"><span class="aui-avatar-inner"><img src="img/project-64.png" alt="Project Name"></span></span></div><div class="aui-page-header-main"><ol class="aui-nav aui-nav-breadcrumbs"><li><a href="http://example.com/">Breadcrumbs</a></li><li><a href="http://example.com/">Sub-page</a></li><li class="aui-nav-selected">Direct parent page</li></ol><h1>Page header with avatar, breadcrumbs and actions</h1></div><div class="aui-page-header-actions"><div class="aui-buttons"><button class="aui-button">Action</button><button class="aui-button">Action</button><button class="aui-button">Action</button></div></div></div></header></div><!--<h2 id="spinner">Spinner 
+<span class="aui-lozenge aui-lozenge-current">experimental api</span>
+</h2><p>While AUI includes a simple spinner icon, sometimes you need to something a little more advanced. To that end, Spinner is available as an optional component.</p><div id="spinner-example"  class="aui-flatpack-example"><div><button class="aui-button" id="spinner-trigger">Do Something</button><div class="button-spinner" id="spinner-spinner"></div></div></div>
+<script>
+AJS.$(document).ready(function(){
+// begin demo javascript    
+
+                            AJS.$(function() {
+                                var spinning = false;
+                                AJS.$('#spinner-trigger').on('click', function() {
+                                    if (!spinning) {
+                                        AJS.$(this).text('Stop Spinning!');
+                                        AJS.$('#spinner-spinner').spin();
+                                        spinning = true;
+                                    } else {
+                                        AJS.$(this).text('Do Something');
+                                        AJS.$('#spinner-spinner').spinStop();
+                                        spinning = false;
+                                    }
+                                });
+                            });
+                            
+// end demo javascript    
+});
+</script>
+<ul class="links"><li><a href="spinner.html">Documentation</a></li></ul>--><h2 id="tabs">Tabs</h2><h3 id="horizontal-tabs">Horizontal tabs</h3><div class="aui-flatpack-example"><div class="aui-tabs horizontal-tabs" id="tabs-example"><ul class="tabs-menu"><li class="menu-item active-tab"><a href="#tabs-example-first"><strong>Tab 1</strong></a></li><li class="menu-item"><a href="#tabs-example-second"><strong>Tab 2</strong></a></li><li class="menu-item"><a href="#tabs-example-third"><strong>Tab 3</strong></a></li></ul><div class="tabs-pane active-pane" id="tabs-example-first"><h2>Tab 1</h2><p>Quidquid latine dictum sit, altum viditur. Sentio aliquos togatos contra me conspirare.</p><p>Quidquid latine dictum sit, altum viditur. Sentio aliquos togatos contra me conspirare.</p></div><div class="tabs-pane" id="tabs-example-second"><h2>Tab 2</h2><p>Quidquid latine dictum sit, altum viditur. Sentio aliquos togatos contra me conspirare.</p><p>Quidquid latine dictum sit, altum viditur. Sentio aliquos togatos contra me conspirare.</p></div><div class="tabs-pane" id="tabs-example-third"><h2>Tab 3</h2><p>Quidquid latine dictum sit, altum viditur. Sentio aliquos togatos contra me conspirare.</p><p>Quidquid latine dictum sit, altum viditur. Sentio aliquos togatos contra me conspirare.</p></div></div> <!-- .aui-tabs --></div><h3 id="vertical-tabs">Vertical tabs</h3><div class="aui-flatpack-example"><div class="aui-tabs vertical-tabs" id="tabs-example2"><ul class="tabs-menu"><li class="menu-item active-tab"><a href="#tabs-example2-first"><strong>Tab 1</strong></a></li><li class="menu-item"><a href="#tabs-example2-second"><strong>Tab 2</strong></a></li><li class="menu-item"><a href="#tabs-example2-third"><strong>Tab 3</strong></a></li></ul><div class="tabs-pane active-pane" id="tabs-example2-first"><h2>Tab 1</h2><p>Quidquid latine dictum sit, altum viditur. Sentio aliquos togatos contra me conspirare.</p><p>Quidquid latine dictum sit, altum viditur. Sentio aliquos togatos contra me conspirare.</p></div><div class="tabs-pane" id="tabs-example2-second"><h2>Tab 2</h2><p>Quidquid latine dictum sit, altum viditur. Sentio aliquos togatos contra me conspirare.</p><p>Quidquid latine dictum sit, altum viditur. Sentio aliquos togatos contra me conspirare.</p></div><div class="tabs-pane" id="tabs-example2-third"><h2>Tab 3</h2><p>Quidquid latine dictum sit, altum viditur. Sentio aliquos togatos contra me conspirare.</p><p>Quidquid latine dictum sit, altum viditur. Sentio aliquos togatos contra me conspirare.</p></div></div> <!-- .aui-tabs --></div><h2 id="tables">Tables</h2><p>Just add <code>class=&quot;aui&quot;</code> to your tables (for tabular data, never layout!). Follow correct structure - include THEAD and TBODY, use TH for headers and TD for body:</p><div class="aui-flatpack-example"><table class="aui" id="ships"><thead><tr><th id="ships-name">Ship name</th><th id="ships-nickname">Nickname</th><th id="ships-type">Type</th><th id="ships-misadventure">Misadventure</th></tr></thead><tbody><tr><td headers="ships-name">Red Dwarf</td><td headers="ships-nickname">The Crimson Short One</td><td headers="ships-type">JMC mining vessel</td><td headers="ships-misadventure">Duplicated, shrunk, lost, found, rebuilt by nanobots.</td></tr><tr><td headers="ships-name">Starbug</td><td headers="ships-nickname">The Bug</td><td headers="ships-type">JMC transport shuttle</td><td headers="ships-misadventure">Crashed multiple times, shot at, sunk.</td></tr><tr><td headers="ships-name">Nova 5</td><td headers="ships-nickname">Not known</td><td headers="ships-type">Coca-Cola marketing vessel</td><td headers="ships-misadventure">Crashed with soapy mainframe.</td></tr></tbody></table></div><h3 id="sortable-tables">Sortable tables 
+<span class="aui-lozenge aui-lozenge-current">experimental api</span>
+</h3><p>You can make AUI tables sortable according to their header row. Columns can be set to unsortable, or sort by special cases such as Issue Keys:</p><div id="sortable-table-example"  class="aui-flatpack-example">
+<table id="mySortableTable" class="aui aui-table-sortable">
+    <thead>
+    <tr>
+        <th class="aui-table-column-issue-key">Key</th>
+        <th>Issue Name</th>
+        <th>Watchers</th>
+        <th class="aui-table-column-unsortable">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><a href="#z">KAR-1123</a></td>
+        <td>Cannot sort tables</td>
+        <td>2</td>
+        <td>Table sorting should be allowed</td>
+    </tr>
+    <tr>
+        <td><a href="#y">KAR-87</a></td>
+        <td>Issue Page doesn't load in IE</td>
+        <td>0</td>
+        <td>When loading issue page on IE it doesn't show</td>
+    </tr>
+    <tr>
+        <td><a href="#b">KAR-1133</a></td>
+        <td>Program crashes on opening</td>
+        <td>3</td>
+        <td>When opening JIRA it crashses</td>
+    </tr>
+    <tr>
+        <td><a href="#a">KAR-4</a></td>
+        <td>Vending Machine is empty</td>
+        <td>9001</td>
+        <td>NO SOFT DRINK!</td>
+    </tr>
+
+    <tr>
+        <td><a href="#a">BAT-4</a></td>
+        <td>Computer is dead</td>
+        <td>1</td>
+        <td>Work computer is not turning on</td>
+    </tr>
+
+    <tr>
+        <td><a href="#a">BAT-11</a></td>
+        <td>Workers are being too loud</td>
+        <td>10</td>
+        <td>The people around me are too loud</td>
+    </tr>
+
+    <tr>
+        <td><a href="#a">BATA-8</a></td>
+        <td>Lift door sometimes doesn't open</td>
+        <td>16</td>
+        <td>When trying to enter the lift, the doors do not open</td>
+    </tr>
+
+    <tr>
+        <td><a href="#a">BATA-14</a></td>
+        <td>Coffee machine is needed</td>
+        <td>501</td>
+        <td>Coffee is needed</td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<script>
+AJS.$(document).ready(function(){
+// begin demo javascript    
+
+
+// end demo javascript    
+});
+</script>
+<h2 id="toolbar">Toolbar2</h2><div id="toolbar2-example"  class="aui-flatpack-example toolbar2-example">
+<div class="aui-toolbar2">
+    <div class="aui-toolbar2-inner">
+        <div class="aui-toolbar2-primary">
+            <div id="button-set" class="aui-buttons">
+                <button class="aui-button aui-button-primary">Edit</button>
+            </div>
+            <div id="button-set1" class="aui-buttons">
+                <button class="aui-button">Assign</button>
+                <button class="aui-button">Assign to me</button>
+                <button class="aui-button">Comment</button>
+                <button class="aui-button aui-dropdown2-trigger" aria-owns="toolbardemo-dropdown2-more" aria-haspopup="true" aria-controls="toolbardemo-dropdown2-more" data-container="#button-set1">More</button>
+            </div>
+        </div>
+        <div class="aui-toolbar2-secondary">
+            <div id="button-set2" class="aui-buttons">
+                <button class="aui-button aui-dropdown2-trigger" aria-owns="dropdown2-view" aria-haspopup="true" aria-controls="dropdown2-view" data-container="#button-set2"><span class="aui-icon aui-icon-small aui-iconfont-view">View</span></button>
+            </div>
+        </div>
+    </div><!-- .aui-toolbar-inner -->
+</div>
+
+<div id="toolbardemo-dropdown2-more" class="aui-dropdown2 aui-style-default" data-dropdown2-alignment="left">
+    <div class="aui-dropdown2-section">
+        <ul class="aui-list-truncate">
+            <li><a href="#" class="active">Agile board</a></li>
+            <li><a href="#">Rank to top</a></li>
+            <li><a href="#">Rank to bottom</a></li>
+        </ul>
+    </div>
+    <div class="aui-dropdown2-section">
+        <ul class="aui-list-truncate">
+            <li><a href="#">Log work</a></li>
+        </ul>
+    </div>
+    <div class="aui-dropdown2-section">
+        <ul class="aui-list-truncate">
+            <li><a href="#">Attach files</a></li>
+            <li><a href="#">Attach screenshot</a></li>
+            <li><a href="#">Add/Edit UI mockup</a></li>
+        </ul>
+    </div>
+    <div class="aui-dropdown2-section">
+        <ul class="aui-list-truncate">
+            <li><a href="#">Voters</a></li>
+            <li><a href="#">Watch issue</a></li>
+            <li><a href="#">Watchers</a></li>
+        </ul>
+    </div>
+    <div class="aui-dropdown2-section">
+        <ul class="aui-list-truncate">
+            <li><a href="#">Create sub-task</a></li>
+            <li><a href="#">Convert to sub-task</a></li>
+        </ul>
+    </div>
+    <div class="aui-dropdown2-section">
+        <ul class="aui-list-truncate">
+            <li><a href="#">Move</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Clone</a></li>
+            <li><a href="#">Labels</a></li>
+            <li><a href="#">Create test session</a></li>
+        </ul>
+    </div>
+    <div class="aui-dropdown2-section">
+        <ul class="aui-list-truncate">
+            <li><a href="#">Delete</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="dropdown2-view" class="aui-dropdown2 aui-style-default" data-dropdown2-alignment="right">
+    <ul class="aui-list-truncate">
+        <li><a href="#" class="active">XML</a></li>
+        <li><a href="#" class="">Word</a></li>
+        <li><a href="#" class="">Print version</a></li>
+    </ul>
+</div> 
+</div>
+<script>
+AJS.$(document).ready(function(){
+// begin demo javascript    
+
+    
+// end demo javascript    
+});
+</script>
+<h2 id="tooltips">Tooltips 
+<span class="aui-lozenge aui-lozenge-current">experimental api</span>
+</h2><div id="tooltips-example"  class="aui-flatpack-example">
+<a id="simple-tooltip" href="http://example.com/" title="Tooltip text">This has a simple tooltip</a>
+</div>
+<script>
+AJS.$(document).ready(function(){
+// begin demo javascript    
+
+AJS.$("#simple-tooltip").tooltip({aria:true});
+
+// end demo javascript    
+});
+</script>
+</section><!-- .aui-page-panel-content --></div><!-- .aui-page-panel-inner --></div><!-- .aui-page-panel --></section><!-- #content --><footer id="footer" role="contentinfo">
+            <section class="footer-body">
+                <ul id="aui-footer-list">
+                    <li>Copyright &copy; 2009-2013 Atlassian</li>
+                    <li><a href="https://developer.atlassian.com/display/AUI/License">Apache License v2.0</a></li>
+                    <li><a href="https://developer.atlassian.com/display/AUI/AUI+Release+Notes">Release Notes</a></li>
+                </ul>
+                <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+            </section>
+</footer><!-- #footer --></div><!-- #page --></body></html>

@@ -1,0 +1,378 @@
+<!doctype html>
+<html>
+	<head>
+        <title>Atlassian Sandbox</title>
+        <link rel='stylesheet' type='text/css' href='static/css/main.css'>
+        <script type="text/javascript">
+        //run some code to detect and setup the environment
+            if (typeof SANDBOX === "undefined") {
+                var pathnameArray = window.location.pathname.split("/");
+                SANDBOX = {};
+                //hack, need to work out a better way to detect this before page load
+                if (pathnameArray[1] == "ajs") {
+                    SANDBOX.env = "refapp";
+                    //refapp doesn't need aui since the web resource manager handles this
+                } else if(pathnameArray[pathnameArray.length - 2] == "sandbox_ui") {
+                    SANDBOX.env = "dev";
+                    document.write("<link rel='stylesheet' type='text/css' href='static/aui/css/aui-all.css'>");
+                    document.write("<script type='text/javascript' src='static/js/libraries/angular-min.js'></scr" + "ipt>");
+                    document.write("<script type='text/javascript' src='static/aui/js/aui-all.js'></scr" + "ipt>");
+                } else if(pathnameArray.length==2){
+                    SANDBOX.env = "node"
+                    document.write("<link rel='stylesheet' type='text/css' href='static/aui/css/aui-all.css'>");
+                    document.write("<script type='text/javascript' src='static/js/libraries/angular-min.js'></scr" + "ipt>");
+                    document.write("<script type='text/javascript' src='static/aui/js/aui-all.js'></scr" + "ipt>");
+                    //this is the node app
+                } else if (window.location.search && window.location.search.indexOf("auicle") >= 0) {
+                    SANDBOX.env = "flatpack-connect";
+                    // TODO: aui-ie, aui-ie9?
+                    document.write("<link rel='stylesheet' type='text/css' href='../auicle/css/aui.css'>");
+                    document.write("<link rel='stylesheet' type='text/css' href='../auicle/css/aui-experimental.css'>");
+                    document.write("<script type='text/javascript' src='static/js/libraries/angular-min.js'></scr" + "ipt>");
+                }
+                else {
+                    SANDBOX.env = "flatpack";
+                    document.write("<link rel='stylesheet' type='text/css' href='../aui/css/aui-all.css'>");
+                    document.write("<script type='text/javascript' src='static/js/libraries/angular-min.js'></scr" + "ipt>");
+                }
+
+                //need to add condition to detect the node version as well
+            }
+        </script>
+	</head>
+	<body
+        ng-controller="MainCtrl"
+        class="sandbox"
+        >
+        <div class="loading-screen">
+            <div class="loading-message">
+                <img src="static/img/aui-sandbox.png" width="231" height="32">
+                <h1> Loading... </h1>
+                <span class="aui-icon aui-icon-wait"></span>
+            </div>
+        </div>
+        <div id="page">
+            <!-- APP HEADER -->
+    		<header id="header" role="banner">
+                <nav class="aui-header aui-dropdown2-trigger-group" role="navigation">
+                    <div class="aui-header-before">
+                        <a class="aui-dropdown2-trigger app-switcher-trigger" aria-owns="app-switcher" id="flatpack-app-switcher-trigger">
+                            <span class="aui-icon aui-icon-small aui-iconfont-appswitcher">Design/AUI</span>
+                        </a>
+                        <div class="aui-dropdown2 aui-style-default" id="app-switcher">
+                             <ul>
+                                <li><a href="/" class="aui-dropdown2-radio interactive">AUI</a></li>
+                                <li><a href="http://developer.atlassian.com/design" class="aui-dropdown2-radio">Design</a></li>
+                                <li><a class="aui-dropdown2-radio checked">AUI Sandbox</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="aui-header-primary">
+                        <h1 id="logo" class="aui-header-logo aui-header-logo-aui">
+                            <a href="/docs/index.html"><span class="aui-header-logo-device">Atlassian Sandbox</span></a>
+                        </h1>
+                        <ul class="aui-nav" ng-show="isFlatpack">
+                            <li><a href="/docs/applicationHeader.html">Documentation</a></li>
+                            <li><a href="/sandbox/index.html">Sandbox</a></li>
+                        </ul>
+                    </div>
+                    <div class="aui-header-secondary">
+                            <ul class="aui-nav">
+                                <li>
+                                <button class="aui-button aui-button-primary"
+                                        ng-click="publish()"
+                                        ng-controller="SaveCtrl"
+                                        ng-class="{hidden: !canSave}"
+                                        id="publish-button"
+                                        >Publish</button>
+                                </li>
+                                <li>
+                                    <div ng-controller="ThemeSwitcherCtrl">
+                                        <a id="theme-switcher-link" class="aui-nav-link aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-owns="theme-switcher-content" title="Themes">
+                                            <span>Theme: {{currentTheme.title}}</span><span class="aui-icon-dropdown"></span>
+                                        </a>
+                                        <div id="theme-switcher-content" class="aui-dropdown2 aui-style-default aui-dropdown2-in-header" aria-hidden="true">
+                                                <ul id="theme-switcher-link-leading">
+                                                    <li ng-repeat="theme in themes">
+                                                        <a class="aui-dropdown2-radio" ng-class="isCurrentTheme(theme)" ng-click="switchToTheme(theme)">{{theme.title}}</a>
+                                                    </li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-owns="sandbox-help-dropdown" title="Help">
+                                        <span class="aui-icon aui-icon-small aui-iconfont-help">Help</span><span class="aui-icon-dropdown"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="aui-dropdown2 aui-style-default aui-dropdown2-in-header" id="sandbox-help-dropdown" style="display: none; top: 40px; min-width: 160px; left: 1213px; " aria-hidden="true">
+                                <div class="aui-dropdown2-section">
+                                    <ul id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                        <li>
+                                            <a  ng-click="openKeyboardShortcuts()" id="keyboard-shortcuts-link" href="#" title="View available keyboard shortcuts ( Type '?' )">
+                                                Keyboard shortcuts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a  ng-click="openAbout()" id="about-link" href="#" title="About Sandbox">
+                                                About Sandbox
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                </nav>
+            </header>
+
+            <!-- END OF APP HEADER -->
+
+            <section id="content" role="main" ng-controller="TogglePanelCtrl">
+                <!-- <div  id="toggle-panel-controller"> -->
+                    <header class="aui-page-header" id="sandbox-page-header">
+                        <div class="aui-page-header-inner">
+                            <div class="aui-page-header-main">
+                                
+                                <div id="toggle-bar" class="aui-toolbar2">
+                                    <div class="aui-toolbar-2-inner">
+                                        <div class="aui-toolbar2-primary" id="save-button-toolbar">
+                                            <div class="aui-buttons">
+                                                <button class="aui-button"
+                                                    ng-click="reset()"
+                                                    > Clear</button>
+                                                <button id="save-button" 
+                                                    class="aui-button"
+                                                    ng-click="save()"
+                                                    > Save as snippet </button>
+                                            </div>
+                                             <span id="wait-icon-container">
+                                                <span class="aui-icon aui-icon-wait hidden" id="save-wait-icon">Wait</span>
+                                             </span>
+                                        </div>
+                                        <div class="aui-toolbar2-secondary" id="panel-switcher-toolbar">
+                                            <div class="aui-buttons">
+                                                <div class="aui-buttons">
+                                                    <button ng-repeat="panel in panels"
+                                                        ng-click="togglePanel(panel.id)"
+                                                        ng-class="{active: panel.displayed}"
+                                                        class="aui-button"
+                                                        >{{panel.title}}</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="aui-toolbar2-tertiary" id="run-javascript-toolbar">
+                                             <div class="aui-buttons">
+                                                <button class="aui-button" id="run-js-button" ng-click="runJavascript()">Run Javascript</button>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="aui-page-panel" id="sandbox-page-panel">
+                        <div class="aui-page-panel-inner">
+                            <!-- LHS Navigation -->
+                            <div class="aui-page-panel-nav" id="library-nav"
+                                ng-class="{hidden: !getPanelById('library').displayed}"
+                                >
+                                <nav class="aui-navgroup aui-navgroup-vertical">
+                                    <div class="aui-navgroup-inner">
+                                        <div class="aui-navgroup-primary">
+                                            <div class="aui-nav-heading"> Library </div>
+                                            <ul id="components-bar" class="aui-nav"
+                                                ng-controller="ComponentPanelCtrl"
+                                                >
+                                                <li ng-repeat="component in components"
+                                                    ng-click="addComponentToEditor(component.id)"
+                                                    ng-class="isActive('component', component.id)"
+                                                    >
+                                                    <a href="#" title="{{component.title}}">{{component.title}}</a>
+                                                </li>
+                                            </ul>
+                                            <div ng-show="patterns" class="aui-nav-heading"> Patterns </div>
+                                            <ul id="components-bar" class="aui-nav"
+                                                ng-controller="ComponentPanelCtrl"
+                                                >
+                                                <li ng-repeat="pattern in patterns"
+                                                    ng-click="addComponentToEditor(pattern.id)"
+                                                    >
+                                                    <a href="#" title="{{pattern.title}}">{{pattern.title}}</a>
+                                                </li>
+                                            </ul>
+                                            <div class="aui-nav-heading"> Snippets </div>
+                                            <ul id="workspace-bar" class="aui-nav">
+                                                <li ng-repeat="snippet in snippets"
+                                                    ng-click="openSnippet(snippet.id)"
+                                                    ng-class="isActive('snippet', snippet.id)"
+                                                    >
+                                                    <a href="#"
+                                                        title="{{snippet.title}}"
+                                                        ng-mouseover="hoverSnippetLink($event)"
+                                                        ng-mouseleave="unhoverSnippetLink($event)"
+                                                        class="snippet-link">{{snippet.title}} 
+                                                            <span class="aui-icon aui-icon-small aui-iconfont-remove remove-snippet-icon hidden"
+                                                            ng-click="checkDeleteSnippet(snippet, $event)"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                            <!--  ALL the main content stuff  --> 
+                            <section class="aui-page-panel-content" id="sandbox-content-area">
+                                <section class="stretch-panels">
+                                <!-- HTML -->
+                                    <section class="stretch html-panel"
+                                        ng-class="{hidden: !getPanelById('html').displayed}"
+                                        ng-style="getPanelById('html')"
+                                        >
+                                        <!-- Needs a wrapper because table cell position absolute doesn't work in firefox -->
+                                        <div class="stretch-wrapper">
+                                            <div class="section-header">
+                                                <h5>HTML</h5>
+                                            </div>
+                                            <div class="section-content">
+                                                <div id="html-editor" class="ace-editor"></div>
+                                            </div>
+                                            <!-- Disabled resizing for phase 1 -->
+                                    </section>
+                                    <!-- JS -->
+                                    <section class="stretch js-panel"
+                                        ng-class="{hidden: !getPanelById('js').displayed}"
+                                        ng-style="getPanelById('js')"
+                                        >
+                                        <!-- Needs a wrapper because table cell position absolute doesn't work in firefox -->
+                                        <div class="stretch-wrapper">
+                                            <div class="splitter-handle"></div>
+                                            <div class="section-header">
+                                                <h5>JavaScript</h5>
+                                            </div>
+                                            <div class="section-content">
+                                                <div id="js-editor" class="ace-editor"></div>
+                                            </div>
+                                            <!-- Disabled resizing for phase 1 -->
+                                        </div>
+                                    </section>                        
+                                    <!-- CSS -->
+                                    <section class="stretch css-panel"
+                                        ng-class="{hidden: !getPanelById('css').displayed}"
+                                        ng-style="getPanelById('css')"
+                                        >
+                                        <!-- Needs a wrapper because table cell position absolute doesn't work in firefox -->
+                                        <div class="stretch-wrapper">
+                                            <div class="stretch-wrapper">
+                                                <div class="splitter-handle"></div>
+                                                <div class="section-header">
+                                                    <h5>CSS</h5>
+                                                </div>
+                                                <div class="section-content">
+                                                    <div id="css-editor" class="ace-editor"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <!-- Preview -->
+                                    <section class="stretch preview-panel" id="preview-panel"
+                                        ng-controller="OutputCtrl"
+                                        ng-class="{hidden: !getPanelById('output').displayed}"
+                                        ng-style="getPanelById('output')"
+                                        >
+                                        <div class="stretch-wrapper">
+                                            <div class="splitter-handle"></div>
+                                            <div class="section-header">
+                                                <h5>Preview</h5>
+                                            </div>
+                                            <div id="preview-content" class="section-content">
+                                                <iframe id="output-frame"></iframe>
+                                                <!-- <div id="output-frame"></div> -->
+                                            </div>
+                                        </div>
+                                    </section> 
+                                </section>
+                            </section>
+                        </div>
+                    </div>                     
+                <!-- End Toggle Controller -->
+            </section>
+            <!-- End Content -->
+
+
+            <div id="hidden-stuff" class="hidden">
+                <div type="text/template" id="url-inline-dialog">
+                        <span>Share this code with other people using this link:</span>
+                        <form class="aui">
+                            <input class="text long-field" type="text" name="publishURL" ng-model="publishURL">
+                        </form>
+                </div>
+
+                <div type="text/template" id="keyboard-shortcuts-dialog-content">
+                    <span> The AUI Sandbox is built with the <a href="http://ace.ajax.org/"> ACE Editor </a> which comes with it's own <a href="https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts"> keyboard shortcuts </a>.
+                    apart from these Sandbox has it's own keyboard shortcuts: </span>
+                    <table class="aui">
+                        <thead>
+                            <tr>
+                                <th> Shortcut </th>
+                                <th> Action </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> Cmd/Ctrl + J</td>
+                                <td> Run with JS </td>
+                            </tr>
+                            <tr>
+                                <td> Cmd/Ctrl + S </td>
+                                <td> Save snippet </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                 <div type="text/template" id="about-dialog-content">
+                   <p/> AUI Sandbox is a tool for Atlassian Internal and Plugin developers.  This tool is designed to familarize developers with both AUI and ADG in a practical hands-on way.
+
+                </div>
+            </div>
+            <footer id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <ul>
+                        <li>Copyright &copy; 2013 <a href="http://www.atlassian.com" target="_blank">Atlassian</a>. <a href="https://developer.atlassian.com/display/AUI/License">Apache License v2.0</a></li>
+                        <li><a href="https://developer.atlassian.com/display/AUI">Documentation</a></li>
+                        <li>AUI {{AUIVersion}}</li>
+                    </ul>
+                </section>
+            </footer>
+        </div>
+        <!-- END PAGE -->
+
+        <script type="text/javascript">
+        //run some code to detect and setup the environment
+                if(SANDBOX.env === "flatpack") {
+                    document.write("<script src='../aui/js/aui-all.js'></scr" + "ipt>");
+                    document.write("<script data-main='static/js/sandbox_ui.js' src='static/js/libraries/require.js'></scr" + "ipt>");
+                } else if(SANDBOX.env === "flatpack-connect") {
+                    // TODO: aui-ie?
+                    document.write("<script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.min.js'></scr" + "ipt>");
+                    document.write("<script type='text/javascript' src='../auicle/js/aui.js'></scr" + "ipt>");
+                    document.write("<script type='text/javascript' src='../auicle/js/aui-datepicker.js'></scr" + "ipt>");
+                    document.write("<script type='text/javascript' src='../auicle/js/aui-experimental.js'></scr" + "ipt>");
+                    document.write("<script type='text/javascript' src='../auicle/js/aui-soy.js'></scr" + "ipt>");
+                    document.write("<script data-main='static/js/sandbox_ui.js' src='static/js/libraries/require.js'></scr" + "ipt>");
+                } else {
+                    document.write("<script data-main='static/js/main.js' src='static/js/libraries/require.js'></scr" + "ipt>");
+                }
+        </script>
+        
+
+        <script type="text/javascript">
+        var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-6032469-23']);_gaq.push(['_setDomainName', '.atlassian.com']);_gaq.push(['_trackPageview']);
+        </script>
+        <script type="text/javascript">
+        (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
+        function recordOutboundLink(link, category) { try { _gaq.push(['_trackEvent', category , 'outbound', link ]); setTimeout('document.location = "' + link + '"', 100) }catch(err){} }
+        </script>
+	</body>
+</html>

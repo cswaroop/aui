@@ -1,0 +1,261 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.sandbox .hidden
+{
+    display: none;
+}
+
+.loading-screen {
+    background: #fff;
+    display: table;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.loading-screen.hidden {
+    display: table;
+    opacity: 0;
+}
+
+.loading-message {
+    display:table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.loading-screen h1 {
+    margin: 10px 0;
+}
+
+/*AUI OVERRIDES*/
+
+/* App Switcher - some of these styles should go into AUI to fix - https://ecosystem.atlassian.net/browse/AUI-1656*/
+.app-switcher-trigger {
+    box-sizing: border-box;
+    float:  left;
+    width: 36px;
+    cursor: pointer;
+}
+
+#flatpack-app-switcher-trigger:after {
+    border: 0;
+}
+
+/* End App Switcher */
+
+/*neccessary because the sandbox doesn't scroll*/
+#page {
+    height: 100%;
+    position:relative;
+}
+
+#page #content {
+    bottom: 125px; /* allow for footer*/
+    position: absolute;
+    top: 41px;
+    width: 100%;
+}
+
+html .aui-page-panel { /* overrides page-panel*/
+    bottom: 0;
+    overflow: hidden;
+    position:absolute;
+    top: 85px; /* Allow for page header (toggle bar) */
+}
+
+html .sandbox #footer {
+    bottom: 0;
+    position: absolute;
+}
+
+html .sandbox .aui-page-panel-inner {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+}
+
+html .sandbox .aui-page-panel-nav {
+    float: left;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+html .sandbox .aui-page-panel-content {
+    left: 257px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    padding: 0;
+}
+
+/*END AUI OVERRIDES*/
+.sandbox {
+    overflow: hidden;  /* stops horizontal scrollbar */
+}
+
+/* ----- App Header ----- */
+.aui-header-logo-device {
+    background-image: url('../img/icon-aui-sandbox@2x.png');
+    background-position: 0 50%;
+    background-repeat: no-repeat; 
+    background-size: 92px;
+    display: block;
+    padding: 8px 0;
+    text-indent: -9999px;
+    width: 92px;
+}
+
+.aui-header .aui-button.aui-button-primary.aui-style {
+    margin-left: 0;
+}
+
+.aui-nav .aui-lozenge {
+    margin-top: 13px;
+}
+
+#header .right-toolbar {
+    float: right;
+}
+
+#wait-icon-container {
+    display: inline-block;
+    height: 16px;
+    /* custom position of wait icon closer to the toolbar */
+    margin-left: -10px;
+    margin-top: 10px;
+    padding: 5px 0;
+    width: 16px;
+}
+
+#toggle-bar {
+    text-align: center;
+    margin: 0;
+}
+
+#toggle-bar .aui-toolbar2-primary {
+    display: inline-block;
+}
+
+/* ----- End Appheader header ----- */
+
+/* Toolbar */
+
+#toggle-bar #panel-switcher-toolbar{
+    display: inline-block;
+    float: none;
+}
+
+#toggle-bar #run-javascript-toolbar{
+    display: inline-block;
+    float: right;
+}
+
+/* End toolbar */
+
+/* Columns and Content */
+
+.stretch {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.stretch-panels {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.stretch-wrapper {
+    height: 100%;
+    position: relative;
+}
+
+.stretch .section-header h5 {
+    padding: 5px 10px;
+}
+
+.stretch .section-content {
+    bottom: 0;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+}
+
+.stretch .ace-editor {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.stretch .splitter-handle {
+    background: transparent;
+    border-left: 1px solid #ccc;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 8px;
+    z-index: 2499;  /* 2499 is one less than the aui dialog blanket */
+}
+
+.stretch .splitter-handle:hover,
+.stretch .splitter-handle.dragging {
+    background: #ccc;
+    cursor: col-resize;
+}
+
+.snippet-link .remove-snippet-icon {
+    color: #707070;
+    float: right;
+}
+
+.snippet-link .remove-snippet-icon:hover {
+    color: #333;
+}
+
+/* End Columns and Content */
+
+/* ----- Output ----- */
+
+#output-frame {
+    border: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+}
+
+/* ----- End Output ----- */
+
+#publish-button{
+    width: 120px;
+}
+
+#theme-switcher-content {
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
